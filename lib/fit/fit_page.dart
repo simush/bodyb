@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'fit_get_started_page.dart';
+
 class FitPage extends StatefulWidget {
   const FitPage({super.key});
 
@@ -26,6 +28,7 @@ class _FitPageState extends State<FitPage> {
         color: Colors.yellow,
         child: Column(
           children: [
+            const SizedBox(height: 20),
             fitContainerBuild(
               title: "WALKING IN PLACE",
               subTitle: "Repeat 2 Times",
@@ -89,7 +92,7 @@ class _FitPageState extends State<FitPage> {
               ),
             ],
           ),
-          Container(
+          SizedBox(
             height: 100,
             width: 100,
             child: Image.asset(
@@ -97,7 +100,17 @@ class _FitPageState extends State<FitPage> {
               fit: BoxFit.cover,
             ),
           ),
-          const Icon(Icons.arrow_forward_ios),
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const FitGetStartedPage(),
+                ),
+              );
+            },
+            icon: const Icon(Icons.arrow_forward_ios),
+          ),
         ],
       ),
     );
