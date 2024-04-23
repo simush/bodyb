@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:projects/pages/fit_page.dart';
+import 'package:projects/fit/fit_page.dart';
 
-import 'home_page.dart';
-import 'profile_page.dart';
+import '../home/home_page.dart';
+import '../profile/profile_page.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -12,7 +12,6 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-
   final _pages = const [
     HomePage(),
     FitPage(),
@@ -20,7 +19,6 @@ class _MainPageState extends State<MainPage> {
   ];
 
   int selectedIndex = 0;
-
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +35,8 @@ class _MainPageState extends State<MainPage> {
         },
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.fitness_center), label: "Fit"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.fitness_center), label: "Fit"),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
         ],
       ),

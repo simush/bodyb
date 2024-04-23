@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'pages/main_page.dart';
+import 'main/main_page.dart';
 
 void main() {
   runApp(const MyBodyBoost());
